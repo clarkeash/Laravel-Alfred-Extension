@@ -1,6 +1,6 @@
 Laravel-Alfred-Extension
 ========================
-I have not managed to get the alfred updater to work so you may be best 'watching' this repo for updates.
+I have not managed to get the alfred updater to work so you may be best 'watching' this repo for updates. 
 
 This extension is for [Alfred](http://www.alfredapp.com/) and you require the [Powerpack](http://www.alfredapp.com/powerpack/).
 
