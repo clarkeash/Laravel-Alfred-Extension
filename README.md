@@ -54,9 +54,15 @@ class Admin_Controller extends Base_Controller
 ```
 
 You can use the following in a similar fashion:
+
 `laravel model item` or `laravel m item`
+
 `laravel view item` or `laravel v item`
+
 `laravel migration item` or `laravel mig item`
+
 `laravel assets item` or `laravel a item`
+
 `laravel test item` or `laravel t item`
+
 `laravel resource item` or `laravel r item`
