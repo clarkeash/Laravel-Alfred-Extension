@@ -33,30 +33,30 @@ If you have more than 1 project on the go you can switch between them using the 
 All of the following commands use the [laravel generator](https://github.com/jeffreyway/laravel-generator) by Jeffrey Way. So see the readme on that page for more info.
 
 ######Generate a controller
-```bash
+<pre>
 	laravel c controllername
-```
+</pre>
 
 or
 
-```bash
+<pre>
 	laravel controller controllername
-```
+</pre>
 
 Will generate a contoller called controllername.
 
 As we are using Jeffs generator you can doing the following
 
-```bash
+<pre>
 	laravel c admin index show edit
-```
+</pre>
 
 and this will create methods for that controller like so:
 
 
 
-```php
-<?php 
+<pre>
+&lt;?php 
 
 class Admin_Controller extends Base_Controller 
 {
@@ -77,4 +77,4 @@ class Admin_Controller extends Base_Controller
 	}
 
 }
-```
+</pre>
