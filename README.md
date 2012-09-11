@@ -1,6 +1,17 @@
-Laravel-Alfred-Extension
-========================
-
+<pre>
+   __                           _                                       
+  / /  __ _ _ __ __ ___   _____| |                                      
+ / /  / _` | '__/ _` \ \ / / _ \ |                                      
+/ /__| (_| | | | (_| |\ V /  __/ |                                      
+\____/\__,_|_|  \__,_| \_/ \___|_|                                      
+                                                                        
+   _   _  __              _     __      _                 _             
+  /_\ | |/ _|_ __ ___  __| |   /__\_  _| |_ ___ _ __  ___(_) ___  _ __  
+ //_\\| | |_| '__/ _ \/ _` |  /_\ \ \/ / __/ _ \ '_ \/ __| |/ _ \| '_ \ 
+/  _  \ |  _| | |  __/ (_| | //__  >  <| ||  __/ | | \__ \ | (_) | | | |
+\_/ \_/_|_| |_|  \___|\__,_| \__/ /_/\_\\__\___|_| |_|___/_|\___/|_| |_|
+                                                                                                                                                                                                                                                                 
+</pre>
 More Info: http://ashleyclarke.me/laravel-alfred-extension/
 
 Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-Alfred-Extension/downloads).
@@ -8,9 +19,7 @@ Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-
 ##Instructions
 
 ####New Project
-```bash
-	laravel new project1
-```
+<pre>laravel new project1</pre>
 
 This will create a directory called 'project1' in your sites directory and laravel will be installed there.
 ####Change Project
@@ -45,7 +54,8 @@ As we are using Jeffs generator you can doing the following
 and this will create methods for that controller like so:
 
 
-<pre>
+
+```php
 <?php 
 
 class Admin_Controller extends Base_Controller 
@@ -67,4 +77,4 @@ class Admin_Controller extends Base_Controller
 	}
 
 }
-</pre>
+```
