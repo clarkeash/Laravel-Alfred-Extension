@@ -40,7 +40,8 @@ As we are using Jeffs generator you can doing the following
 
 and this will create methods for that controller like so:
 
-```php
+
+<pre>
 <?php 
 
 class Admin_Controller extends Base_Controller 
@@ -62,4 +63,4 @@ class Admin_Controller extends Base_Controller
 	}
 
 }
-```
+</pre>
