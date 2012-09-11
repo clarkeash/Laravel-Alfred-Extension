@@ -1,5 +1,6 @@
 Laravel-Alfred-Extension
 ========================
+I have not managed to get the alfred updater to work so you may be best 'watching' this repo for updates.
 
 More Info: http://ashleyclarke.me/laravel-alfred-extension/
 
