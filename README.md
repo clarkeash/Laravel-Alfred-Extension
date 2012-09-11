@@ -8,11 +8,15 @@ Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-
 ##Instructions
 
 ####New Project
-```laravel new project1```
+```bash
+	laravel new project1
+```
 
 This will create a directory called 'project1' in your sites directory and laravel will be installed there.
 ####Change Project
-```laravel set project2```
+```bash
+	laravel set project2
+```
 
 If you have more than 1 project on the go you can switch between them using the 'set' command. Then you can run the generator commands below.
 
