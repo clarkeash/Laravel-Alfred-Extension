@@ -30,7 +30,7 @@ As we are using Jeffs generator you can doing the following
 and this will create methods for that controller like so:
 
 ```php
-&lt;?php 
+<?php 
 
 class Admin_Controller extends Base_Controller 
 {
