@@ -2,7 +2,11 @@ Laravel-Alfred-Extension
 ========================
 I have not managed to get the alfred updater to work so you may be best 'watching' this repo for updates.
 
-More Info: http://ashleyclarke.me/laravel-alfred-extension/
+This extension is for [Alfred](http://www.alfredapp.com/) and you require the [Powerpack](http://www.alfredapp.com/powerpack/).
+
+With this extension you can create a new laravel project with the latest version of [laravel](http://laravel.com/) and run generator tasks with the genertor by [Jeffrey Way](https://twitter.com/jeffrey_way).
+
+<br>
 
 Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-Alfred-Extension/downloads).
 
