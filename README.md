@@ -1,17 +1,19 @@
 <pre>
-   __                           _                                       
-  / /  __ _ _ __ __ ___   _____| |                                      
- / /  / _` | '__/ _` \ \ / / _ \ |                                      
-/ /__| (_| | | | (_| |\ V /  __/ |                                      
-\____/\__,_|_|  \__,_| \_/ \___|_|                                      
-                                                                        
-   _   _  __              _     __      _                 _             
-  /_\ | |/ _|_ __ ___  __| |   /__\_  _| |_ ___ _ __  ___(_) ___  _ __  
- //_\\| | |_| '__/ _ \/ _` |  /_\ \ \/ / __/ _ \ '_ \/ __| |/ _ \| '_ \ 
-/  _  \ |  _| | |  __/ (_| | //__  >  <| ||  __/ | | \__ \ | (_) | | | |
-\_/ \_/_|_| |_|  \___|\__,_| \__/ /_/\_\\__\___|_| |_|___/_|\___/|_| |_|
+  _                              _                                          
+ | |    __ _ _ __ __ ___   _____| |                                         
+ | |   / _` | '__/ _` \ \ / / _ \ |                                         
+ | |__| (_| | | | (_| |\ V /  __/ |                                         
+ |_____\__,_|_|  \__,_| \_/ \___|_|                                         
+     _    _  __              _   _____      _                 _             
+    / \  | |/ _|_ __ ___  __| | | ____|_  _| |_ ___ _ __  ___(_) ___  _ __  
+   / _ \ | | |_| '__/ _ \/ _` | |  _| \ \/ / __/ _ \ '_ \/ __| |/ _ \| '_ \ 
+  / ___ \| |  _| | |  __/ (_| | | |___ >  <| ||  __/ | | \__ \ | (_) | | | |
+ /_/   \_\_|_| |_|  \___|\__,_| |_____/_/\_\\__\___|_| |_|___/_|\___/|_| |_|
+                                                                            
                                                                                                                                                                                                                                                                  
 </pre>
+
+
 More Info: http://ashleyclarke.me/laravel-alfred-extension/
 
 Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-Alfred-Extension/downloads).
@@ -23,9 +25,7 @@ Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-
 
 This will create a directory called 'project1' in your sites directory and laravel will be installed there.
 ####Change Project
-```bash
-	laravel set project2
-```
+<pre>laravel set project2</pre>
 
 If you have more than 1 project on the go you can switch between them using the 'set' command. Then you can run the generator commands below.
 
