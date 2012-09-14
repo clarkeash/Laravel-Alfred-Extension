@@ -72,6 +72,6 @@ You can use the following in a similar fashion:
 
 `laravel resource item` or `laravel r item`
 
-####Comments &amp; Suggestions
+##Comments &amp; Suggestions
 
 If you have any comments or suggestions for this extension the please comment on my [blog post](http://ashleyclarke.me/laravel-alfred-extension/) or log them as an issue here on git hub. Thanks.
