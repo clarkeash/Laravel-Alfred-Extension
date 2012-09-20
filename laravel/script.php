@@ -133,6 +133,18 @@ switch ($cmd) {
 		}
 	break;
 
+
+	//list laravel projects
+	case 'l':
+	case 'list':
+		$dir = json_decode(file_get_contents('tmp.txt'));
+		//returns all directories containing a "laravel" directory
+		$output = shell_exec("cd ~/Sites ; du -d 2 | grep 'laravel' | awk '{print $2}'");
+		$output = str_replace('./', '', $output);
+		$output = str_replace('/laravel', '', $output);
+		echo 'Available projects: '.$output;
+	break;
+
 	//--------------------------//
 	default:
 		# code...
