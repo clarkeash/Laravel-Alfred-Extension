@@ -8,15 +8,19 @@ $cmd = str_replace("\\", "", $value[0]);
 switch ($cmd) {
 	//setup new project
 	case 'new':
-		fwrite(fopen('tmp.txt','w'), json_encode($sec));
-		shell_exec("cd ~/Sites && mkdir $sec && cd $sec");
-		shell_exec("cd ~/Sites/$sec ; curl -silent -L https://github.com/laravel/laravel/zipball/master > laravel.zip ; unzip -qq laravel.zip ; rm laravel.zip ; cd *-laravel-* ; mv * .. ; cd .. ; rm -R *-laravel-*");
-		shell_exec("cd ~/Sites/$sec ; chmod -R o+w storage;");
-		shell_exec("cd ~/Sites/$sec ; curl https://raw.github.com/JeffreyWay/Laravel-Generator/master/generate.php > application/tasks/generate.php");
-		shell_exec("cd ~/Sites/$sec ; curl https://raw.github.com/gist/3693377/506ede69c059fa8df1cfc10f72847bc740ec79f1/application.php > application/config/application.php");
-		shell_exec("cd ~/Sites/$sec ; php artisan key:generate");
-		shell_exec("cd ~/Sites/$sec ; /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .");
-		echo "Your new project has been created!";
+		if(!empty($sec)){
+			fwrite(fopen('tmp.txt','w'), json_encode($sec));
+			shell_exec("cd ~/Sites && mkdir $sec && cd $sec");
+			shell_exec("cd ~/Sites/$sec ; curl -silent -L https://github.com/laravel/laravel/zipball/master > laravel.zip ; unzip -qq laravel.zip ; rm laravel.zip ; cd *-laravel-* ; mv * .. ; cd .. ; rm -R *-laravel-*");
+			shell_exec("cd ~/Sites/$sec ; chmod -R o+w storage;");
+			shell_exec("cd ~/Sites/$sec ; curl https://raw.github.com/JeffreyWay/Laravel-Generator/master/generate.php > application/tasks/generate.php");
+			shell_exec("cd ~/Sites/$sec ; curl https://raw.github.com/gist/3693377/506ede69c059fa8df1cfc10f72847bc740ec79f1/application.php > application/config/application.php");
+			shell_exec("cd ~/Sites/$sec ; php artisan key:generate");
+			shell_exec("cd ~/Sites/$sec ; /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .");
+			echo "Your new project has been created!";
+		} else {
+			echo "Please enter a project directory!";
+		}
 	break;
 	
 	//generate controller
