@@ -145,6 +145,18 @@ switch ($cmd) {
 		echo 'Available projects: '.$output;
 	break;
 
+
+	//display version
+	case 'version':
+		if (file_exists("update.xml")) {
+			$xml = simplexml_load_file("update.xml");
+			echo "Laravel $xml->version";
+		}
+		else {
+			echo "No version information found for this extension";
+		}
+	break;
+
 	//--------------------------//
 	default:
 		# code...
