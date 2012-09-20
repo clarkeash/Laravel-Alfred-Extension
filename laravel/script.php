@@ -22,13 +22,13 @@ switch ($cmd) {
 			echo "Please enter a project directory!";
 		}
 	break;
-	
+
 	//generate controller
 	case 'c':
 	case 'controller':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:controller $sec");
 			echo "Success!";
@@ -41,7 +41,7 @@ switch ($cmd) {
 	case 'model':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:model $sec");
 			echo "Success!";
@@ -54,7 +54,7 @@ switch ($cmd) {
 	case 'view':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:view $sec");
 			echo "Success!";
@@ -67,7 +67,7 @@ switch ($cmd) {
 	case 'migration':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:migration $sec");
 			echo "Success!";
@@ -80,7 +80,7 @@ switch ($cmd) {
 	case 'assets':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:assets $sec");
 			echo "Success!";
@@ -93,7 +93,7 @@ switch ($cmd) {
 	case 'test':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:test $sec");
 			echo "Success!";
@@ -106,17 +106,31 @@ switch ($cmd) {
 	case 'resource':
 		$dir = json_decode(file_get_contents('tmp.txt'));
 		if(empty($dir)){
-			echo "No directory set, use the 'set' command";
+			echo "No directory set, use the 'project' command";
 		}else{
 			shell_exec("cd ~/Sites/$dir ; php artisan generate:resource $sec");
 			echo "Success!";
 		}
 	break;
 
-	//set a dir, allows changing of projects
-	case 'set':
-		fwrite(fopen('tmp.txt','w'), json_encode($sec));
-		echo "directory set to $sec";
+
+	//get and set the current project directory
+	case 'set': //legacy command
+	case 'p':
+	case 'project':
+		//if no parameter is set show current project
+		if(empty($sec)){
+			$dir = json_decode(file_get_contents('tmp.txt'));
+			if(empty($dir)){
+				echo "No directory set, use the 'project' command";
+			}else{
+				echo "Current directory is set to '$dir'";
+			}
+		//else set a dir, allows changing of projects
+		}else{
+			fwrite(fopen('tmp.txt','w'), json_encode($sec));
+			echo "Directory set to $sec";
+		}
 	break;
 
 	//--------------------------//
