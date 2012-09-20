@@ -7,7 +7,8 @@
 	<key>category</key>
 	<string>SCRIPTS</string>
 	<key>command</key>
-	<string>php -f script.php -- "{query}"</string>
+	<string>RET=$(php -f script.php -- "{query}")
+echo $RET</string>
 	<key>disabled</key>
 	<false/>
 	<key>escapedollar</key>
