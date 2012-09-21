@@ -8,7 +8,7 @@ With this extension you can create a new laravel project with the latest version
 
 <br>
 
-Download extension via the [downloads tab](https://github.com/clarkeash/Laravel-Alfred-Extension/downloads).
+Please download, delete the current extension and drag the 'laravel' folder into the extensions page of alfred. This version should allow support for the alfred extension updater.
 
 ##Instructions
 
