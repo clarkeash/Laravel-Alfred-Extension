@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <update>
     <version>1.2</version>
-    <url>https://github.com/downloads/clarkeash/Laravel-Alfred-Extension/1.2.zip</url>
+    <url>https://raw.github.com/clarkeash/Laravel-Alfred-Extension/master/laravel/script.php</url>
     <comments>Fixed alfred script command. Fixed 'new' command. Fixed Extension Updater. Added 'list', 'version' and 'project' command.</comments>
 </update>
