@@ -15,7 +15,7 @@ Download this repo and drag the laravel folder into the extensions tab of alfred
 ##Instructions
 By default all new projects will be stored in the Sites directory inside your home folder. You may change this if you work from another directory. You use the following command 
 
-```laravel directory path/to/directory```
+```laravel directory path/to/directory/```
 
 e.g. if you use MAMP you would do the following ```laravel directory /Applications/MAMP/htdocs/``` <b>This directory must end with a trailing slash!</b>
 
