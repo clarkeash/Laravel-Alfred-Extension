@@ -1,6 +1,6 @@
 <?php
 include 'updater.php';
-$version = 1.3;
+$version = 1.4;
 
 $query = $argv[1];
 $value = explode(" ", $query, 2);
@@ -11,6 +11,12 @@ $config = json_decode(file_get_contents("tmp.txt"));
 $directory = $config->directory;
 $project = $config->project;
 $main = $config->directory . $config->project;
+//sets to 1 for new users, can be set to zero to disable
+if(is_null($config->editor)){
+	$config->editor = 1;
+	fwrite(fopen('tmp.txt','w'), json_encode($config));
+}
+
 
 if($version == getversion()){
 	switch ($cmd) {
@@ -27,6 +33,7 @@ if($version == getversion()){
 			}
 			if(!empty($sec)){
 				$config->project = $sec;
+				$main = $config->directory . $config->project;
 				fwrite(fopen('tmp.txt','w'), json_encode($config));
 				shell_exec("cd $config->directory && mkdir $sec && cd $sec");
 				shell_exec("cd $main ; curl -silent -L https://github.com/laravel/laravel/zipball/master > laravel.zip ; unzip -qq laravel.zip ; rm laravel.zip ; cd *-laravel-* ; mv * .. ; cd .. ; rm -R *-laravel-*");
@@ -34,7 +41,9 @@ if($version == getversion()){
 				shell_exec("cd $main ; curl https://raw.github.com/JeffreyWay/Laravel-Generator/master/generate.php > application/tasks/generate.php");
 				shell_exec("cd $main ; curl https://raw.github.com/gist/3693377/506ede69c059fa8df1cfc10f72847bc740ec79f1/application.php > application/config/application.php");
 				shell_exec("cd $main ; php artisan key:generate");
-				shell_exec("cd $main ; /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .");
+				if($config->editor != 0){
+					shell_exec("cd $main ; /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .");
+				}
 				echo "Your new project has been created!";
 			} else {
 				echo "Please enter a project name";
@@ -48,7 +57,8 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:controller $sec");
-				echo "Success!";
+				//echo "Success!";
+				echo $main;
 			}
 		break;
 
@@ -174,10 +184,22 @@ if($version == getversion()){
 			shell_exec("cd $main ; php artisan migrate:rollback");
 		break;
 
+		//disable the project opening up
+		case 'editordisable':
+			$config->editor = 0;
+			fwrite(fopen('tmp.txt','w'), json_encode($config));
+			echo "Editor Disabled";
+		break;
 
-		case 'help':
+		//enable the project opening up
+		case 'editorenable':
+			$config->editor = 1;
+			fwrite(fopen('tmp.txt','w'), json_encode($config));
+			echo "Editor Enabled";
+		break;
+
 		default:
-			//do something here.
+			echo "Unknown Command.";
 		break;
 	}
 }else{

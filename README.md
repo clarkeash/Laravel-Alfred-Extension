@@ -1,6 +1,6 @@
 Laravel-Alfred-Extension
 ========================
-This extension will now automatically update itself as of version 1.3
+This extension will now automatically update itself as of version 1.4
 To check your version at any time run ```laravel version```
 
 
@@ -98,6 +98,11 @@ You can also rollback a migration at anytime with ```laravel rollback```.
 
 ####Artisan
 This extension is mainly a wrapper that runs commands through artisan. If you need to run any other commands through artisan then you can do the following ```laravel artisan command```.
+
+####The Editor
+I have had a few requests to either change the editor or disable it when creating a new project.
+
+I am looking into new editors but for now you can do ```laravel editordisable``` to disable it and ```laravel editorenable``` to enable it again.
 
 ##Comments &amp; Suggestions
 
