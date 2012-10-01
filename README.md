@@ -10,6 +10,8 @@ With this extension you can create a new laravel project with the latest version
 <br>
 
 ###Installation
+If you are using an old version please delete that first then:
+
 Download this repo and drag the laravel folder into the extensions tab of alfred preferences.
 
 ##Instructions
