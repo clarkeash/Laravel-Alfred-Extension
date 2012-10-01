@@ -9,7 +9,7 @@ function update($current_version){
 	if($current_version < $live){
 		//echo "outdated";
 		exec("curl $file > $dir/script.php");
-		echo "hello";
+		echo "Extension has been updated, please run command again.";
 		
 	}
 }
