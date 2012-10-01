@@ -1,25 +1,38 @@
 Laravel-Alfred-Extension
 ========================
-I have not managed to get the alfred updater to work so you may be best 'watching' this repo for updates. 
+This extension will now automatically update itself as of version 1.3
+To check your version at any time run ```laravel version```
+
 
 This extension is for [Alfred](http://www.alfredapp.com/) and you require the [Powerpack](http://www.alfredapp.com/powerpack/).
 
 With this extension you can create a new laravel project with the latest version of [laravel](http://laravel.com/) and run generator tasks with the generator by [Jeffrey Way](https://twitter.com/jeffrey_way).
-
 <br>
 
-Please download, delete the current extension and drag the 'laravel' folder into the extensions page of alfred. This version should allow support for the alfred extension updater. or download the file via the downloads tab.
+###Installation
+Download this repo and drag the laravel folder into the extensions tab of alfred preferences.
 
 ##Instructions
+By default all new projects will be stored in the Sites directory inside your home folder. You may change this if you work from another directory. You use the following command 
+
+```laravel directory path/to/directory```
+
+e.g. if you use MAMP you would do the following ```laravel directory /Applications/MAMP/htdocs/``` <b>This directory must end with a trailing slash!</b>
+
 
 ####New Project
 ```laravel new project1```
 
 This will create a directory called 'project1' in your sites directory and laravel will be installed there.
 ####Change Project
-```laravel set project2```
+```laravel project project2```
 
-If you have more than 1 project on the go you can switch between them using the 'set' command. Then you can run the generator commands below.
+If you have more than 1 project on the go you can switch between them using the 'project' command. Then you can run the generator commands below.
+
+You can run ```laravel project``` without a secondary command and that will tell you the current project.
+
+You may also list all the laravel projects by running ```laravel list```.
+
 
 ####Generator Commands
 All of the following commands use the [laravel generator](https://github.com/jeffreyway/laravel-generator) by Jeffrey Way. So see the readme on that page for more info.
@@ -71,6 +84,18 @@ You can use the following in a similar fashion:
 `laravel test item` or `laravel t item`
 
 `laravel resource item` or `laravel r item`
+
+####Migrations
+After creating a migration with ```laravel mig item``` you will want to migrate it, you can do this by doing the following:
+
+Firstly you need to setup the migrations table with ```laravel install```.
+
+Then you can migrate your migration with ```laravel migrate```.
+
+You can also rollback a migration at anytime with ```laravel rollback```.
+
+####Artisan
+This extension is mainly a wrapper that runs commands through artisan. If you need to run any other commands through artisan then you can do the following ```laravel artisan command```.
 
 ##Comments &amp; Suggestions
 
