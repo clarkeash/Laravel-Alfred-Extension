@@ -110,7 +110,7 @@ if($version == getversion()){
 		//generate test
 		case 't':
 		case 'test':
-			if(empty($dir)){
+			if(empty($project)){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:test $sec");
