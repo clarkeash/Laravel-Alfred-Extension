@@ -1,6 +1,6 @@
 <?php
 include 'updater.php';
-$version = 1.5;
+$version = 1.6;
 
 $query = $argv[1];
 $value = explode(" ", $query, 2);
