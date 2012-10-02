@@ -1,6 +1,6 @@
 <?php
 include 'updater.php';
-$version = 1.4;
+$version = 1.5;
 
 $query = $argv[1];
 $value = explode(" ", $query, 2);
@@ -57,8 +57,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:controller $sec");
-				//echo "Success!";
-				echo $main;
+				echo "Success!";
 			}
 		break;
 
@@ -78,7 +77,7 @@ if($version == getversion()){
 		//generate view
 		case 'v':
 		case 'view':
-			if(empty($dir)){
+			if(empty($project)){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:view $sec");
@@ -89,7 +88,7 @@ if($version == getversion()){
 		//generate migration
 		case 'mig':
 		case 'migration':
-			if(empty($dir)){
+			if(empty($project)){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:migration $sec");
@@ -100,7 +99,7 @@ if($version == getversion()){
 		//generate assets
 		case 'a':
 		case 'assets':
-			if(empty($dir)){
+			if(empty($project)){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:assets $sec");
@@ -122,7 +121,7 @@ if($version == getversion()){
 		//generate resource
 		case 'r':
 		case 'resource':
-			if(empty($dir)){
+			if(empty($project)){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:resource $sec");
