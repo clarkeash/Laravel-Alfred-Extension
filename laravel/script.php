@@ -57,7 +57,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:controller $sec");
-				echo "Success!";
+				echo "Controller was created!";
 			}
 		break;
 
@@ -69,7 +69,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:model $sec");
-				echo "Success!";
+				echo "Model was created!";
 			}
 		break;
 
@@ -81,7 +81,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:view $sec");
-				echo "Success!";
+				echo "View was created!";
 			}
 		break;
 
@@ -92,7 +92,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:migration $sec");
-				echo "Success!";
+				echo "Migration was created!";
 			}
 		break;
 
@@ -103,7 +103,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:assets $sec");
-				echo "Success!";
+				echo "Assets were created!";
 			}
 		break;
 
@@ -114,7 +114,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:test $sec");
-				echo "Success!";
+				echo "Test was created!";
 			}
 		break;
 
@@ -125,7 +125,7 @@ if($version == getversion()){
 				echo "No project set, use the 'project' command";
 			}else{
 				shell_exec("cd $main ; php artisan generate:resource $sec");
-				echo "Success!";
+				echo "Resource was created!";
 			}
 		break;
 
