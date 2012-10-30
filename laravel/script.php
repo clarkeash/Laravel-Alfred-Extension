@@ -4,7 +4,7 @@ $version = 1.7;
 
 $query = $argv[1];
 $value = explode(" ", $query, 2);
-$sec = str_replace("\\", "", $value[1]);
+$sec = (isset($value[1])) ? str_replace("\\", "", $value[1]) : "";
 $cmd = str_replace("\\", "", $value[0]);
 
 $config = json_decode(file_get_contents("tmp.txt"));
