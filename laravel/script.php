@@ -1,6 +1,6 @@
 <?php
 include 'updater.php';
-$version = 1.7;
+$version = 1.8;
 
 $query = $argv[1];
 $value = explode(" ", $query, 2);
@@ -44,7 +44,7 @@ if($version == getversion()){
 				if($config->editor != 0){
 					shell_exec("cd $main ; /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .");
 				}
-				echo "Your new project has been created!";
+				echo "Your project {$sec} has been created!";
 			} else {
 				echo "Please enter a project name";
 			}
