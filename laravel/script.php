@@ -166,21 +166,25 @@ if($version == getversion()){
 		//allows you to run any command through artisan
 		case 'artisan':
 			shell_exec("cd $main ; php artisan $sec");
+			echo "complete";
 		break;
 
 		//installs the migration tables
 		case 'install':
 			shell_exec("cd $main ; php artisan migrate:install");
+			echo "complete";
 		break;
 
 		//migrates a migration
 		case 'migrate':
 			shell_exec("cd $main ; php artisan migrate");
+			echo "complete";
 		break;
 
 		//rolls back a migration
 		case 'rollback':
 			shell_exec("cd $main ; php artisan migrate:rollback");
+			echo "complete";
 		break;
 
 		//disable the project opening up
