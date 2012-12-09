@@ -1,5 +1,8 @@
 Laravel-Alfred-Extension
 ========================
+
+***Just a note that I am working on a new version for Laravel 4***
+
 This extension will now automatically update itself as of version 1.4
 To check your version at any time run ```laravel version```
 
