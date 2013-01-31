@@ -1,1 +1,1 @@
-{"directory":"~\/Sites\/","project":""}
+{"directory":"~\/Sites\/","project":"","editor":1}
