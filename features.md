@@ -48,3 +48,11 @@
 * Create resource $$$
 * …
 
+###Config
+---
+* "set base directory" - subtext will show where full path etc
+* set mail config?
+* set db config?
+
+Under controllers, models etc
+allow setting of a different path
