@@ -16,7 +16,7 @@
 ###Model
 ---
 * Create model $$$
-* Create supermodel $$$
+* maybe give ability to add helper stuff like in User.php
 * …
 
 ###Migration
@@ -30,6 +30,7 @@
 ###Seed
 ---
 * Create seed $$$
+* seed the db
 * …
 
 ###Test
