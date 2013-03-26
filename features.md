@@ -68,4 +68,5 @@ Under controllers, models etc
 allow setting of a different path
 
 * Allow the ability to run any artisan command
-* pull in the routes command by jeff (as this should be optional)
+* pull in the routes command by jeff (as this should be optional) not longer required as this is now in the core, however I like the idea of allowing users to pull in packages/commands also would be good for assets like jquery etc
+* 
