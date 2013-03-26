@@ -8,6 +8,7 @@
 * Set default pgsql configuration
 * Set default sqlsrv configuration
 * set default db driver
+* possibly ftp/ssh details as deploy should becoming in 4.1/2 i think
 
 
 ###Project
@@ -65,3 +66,6 @@
 
 Under controllers, models etc
 allow setting of a different path
+
+* Allow the ability to run any artisan command
+* pull in the routes command by jeff (as this should be optional)
